@@ -580,6 +580,8 @@ async function submitForm(){
   const c = document.getElementById('fc').value.trim();
   if(!n||!p){ alert('Please enter your name and phone number.'); return; }
 
+  fbq('track', 'Lead');
+
   // sessionStorage mein save karo (thankyou page ke liye)
   try{
     const rawAns = {...ans, name:n, phone:p, email:e, company:c};
